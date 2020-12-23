@@ -1,0 +1,49 @@
+.tile {
+    background: #9ea5ff;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-field .form-control {
+    width: 40%;
+}
+
+.input-field > div {
+    margin: auto;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.details > div * {
+    margin: auto 3px;
+}
+
+.details .form-control {
+    max-width: 100px;
+}
+
+.result-block {
+    visibility: hidden;
+    background: white;
+}
+
+#chart-wrapper {
+    margin: auto;
+    width: 50%;
+}
+
+#plot-canvas {
+    background: white;
+}

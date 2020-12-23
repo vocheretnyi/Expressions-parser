@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expression parser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="{{url_for('static', filename='css/noty.css')}}">-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="tile">
+        <div class="input-field">
+            <div>x = </div>
+            <input type="number" class="form-control" id="var-value" value="3">
+            <div>f(x) =</div>
+            <input type="text" class="form-control" id="function-input" value="2*sin(1/(exp(3*x)+1)-tg(x+PI/2))"/>
+            <div>=</div>
+            <div id="result-output"></div>
+        </div>
+        <div class="details">
+            <div class="input-field">
+                <div>x1 = </div>
+                <input type="number" class="form-control" id="tab-from" value="-10">
+                <div>x2 = </div>
+                <input type="number" class="form-control" id="tab-to" value="10">
+                <div>step</div>
+                <input type="number" class="form-control" id="tab-step" value="1">
+            </div>
+            <div class="btn btn-success" id="submit-btn">Calculate</div>
+        </div>
+    </div>
+    <div class="result-block d-flex">
+        <div id="tokens" class="tile">
+            <span>Tokens:</span>
+        </div>
+    </div>
+    <div class="tile result-block" id="chart-wrapper">
+        <canvas id="plot-canvas"></canvas>
+    </div>
+    <div id="errors" class="tile">
+            <span>Errors:</span>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="{{ url_for('static', filename='js/core.js') }}"></script>
+</body>
+</html>
